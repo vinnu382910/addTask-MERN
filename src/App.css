@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
+.heading-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-main-cont {
+  padding: 30px;
+  background-color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-line {
+  border: 3px solid rgb(0, 89, 255);
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-add-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.input-search {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-icon {
+  height: 28px;
+  width: 21px;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.add-task {
+  height: 43px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 0px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}
+
+
+.form-cont{
+  color: black;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.close-btn{
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  align-self: flex-end;
+  background-color: transparent;
+  color: black;
+  font-size: 28px;
+  margin-top: 0px;
+  border-radius: 10px;
+}
+
+.form-addTask-btn {
+  background-color: #279aff;
+  color: #f9f9f9;
+  font-weight: bold;
+  height: 30px;
+  min-width: 80px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-btn {
+  background-color: #f73a3a;
+  color: #f9f9f9;
+  font-weight: bold;
+  height: 30px;
+  min-width: 80px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.addTask-input {
+  height: 30px;
+  width: 200px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+.add-desc {
+  width: 200px;
+  min-height: 100px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+/*Class for Tasks */
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Filters */
+
+.filters-cont {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.sort-select {
+  height: 45px;
+  background-color: #c5e4ff;
+  border: 2px solid #000;
+  color: #00060b;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .input-search {
+    width: 140px;
+  }
+
+  .add-task {
+    font-size: 10px;
+    padding: 0px;
+  }
+
+  .filters-cont {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+  }
+  .filters {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  .slect-date {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  table {
+    display: block;
+    border: none;
+  }
+
+  thead {
+    display: none; /* Hide table headers */
+  }
+
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    flex-basis: 30%;
+    font-weight: bold;
+    color: #8f8c8c;
+    min-width: 100px;
+  }
+
+}
+
+/* General Button Styling */
+button {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #28a745; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit-btn:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Class for edit task*/
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #c5e4ff;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
