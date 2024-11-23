@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Task Tracker Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The **Task Tracker Application** is a comprehensive task management tool built with React, enabling users to create, manage, and track tasks with advanced filtering and sorting options. The application is equipped with a dynamic theme toggle (Dark and Light mode) implemented using `useReducer`. Tasks can also be edited and updated seamlessly, providing a user-friendly experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
+- **Add and Manage Tasks**: Users can create tasks with a title, status, and due date.
+- **Filter Tasks by Status**: Filter tasks based on their status, including *All*, *Completed*, *In Progress*, and *Pending*.
+- **Sort Tasks by Date**: Sort tasks in ascending or descending order based on the due date.
+- **Search Functionality**: Easily search for tasks by their title.
+- **Edit and Update Tasks**: Edit existing tasks and update their details effortlessly.
+- **Dynamic Theme Switching**: Toggle between **Dark Mode** and **Light Mode** using `useReducer`.
+- **Persistent Data Storage**: Tasks are stored in `localStorage`, allowing persistence across sessions.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Packages Used
+To run this project successfully, the following packages need to be installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Core Dependencies
+1. **React and React DOM**
+   ```bash
+   npm install react react-dom
+   ```
+   Versions used: `"react": "^18.3.1", "react-dom": "^18.3.1"`
 
-### `npm test`
+2. **React Icons**
+   ```bash
+   npm install react-icons
+   ```
+   Used for elegant and customizable icons in the application.  
+   Version used: `"react-icons": "^5.3.0"`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **React Scripts**
+   ```bash
+   npm install react-scripts
+   ```
+   Provides a set of scripts and configuration for Create React App.  
+   Version used: `"react-scripts": "5.0.1"`
 
-### `npm run build`
+4. **React Popup**
+   ```bash
+   npm install reactjs-popup
+   ```
+   Used to create modal popups for adding and editing tasks.  
+   Version used: `"reactjs-popup": "^2.0.6"`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. **Styled Components**
+   ```bash
+   npm install styled-components
+   ```
+   A library for writing CSS-in-JS for better styling and component isolation.  
+   Version used: `"styled-components": "^6.1.13"`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
+To set up and run this project locally, follow these steps:
 
-### `npm run eject`
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd task-tracker-app
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Dependencies**
+   Run the following command to install the required packages:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Run the Application**
+   Start the application in development mode:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Project Highlights
+- **Dark and Light Theme**: Implemented using `useReducer`, allowing a global and consistent theme toggle.
+- **Efficient Filters**: Tasks are dynamically filtered and rendered based on relevant statuses and due dates.
+- **Editable Tasks**: Provides functionality to edit and update tasks directly through an intuitive UI.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
+The project has the following key structure:
 
-### Code Splitting
+```
+src/
+├── components/
+│   ├── AddTask.js         # Component for adding new tasks
+│   ├── TaskList.js        # Component for displaying the list of tasks
+│   ├── EditTaskModal.js   # Component for editing a task
+├── styledComponents.js    # Styled components for UI styling
+├── App.js                 # Main app file
+├── App.css                # Application styles
+├── index.js               # Entry point of the application
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Author
+Developed by **Vinay**.  
+For queries, feel free to contact me at **vinaykalva712@gmail.com**.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy using the **Task Tracker Application**! 🎉
