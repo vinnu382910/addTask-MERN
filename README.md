@@ -102,6 +102,38 @@ src/
 ├── App.css                # Application styles
 ├── index.js               # Entry point of the application
 ```
+---
+### New Learning and Experience from this Project
+
+Through this project, I gained valuable insights into handling **localStorage** and the differences between development and production environments. Here's what I learned:
+
+### Behavior of **localStorage** in Different Environments
+
+1. **localStorage in Development:**
+   - While developing, especially using tools like **React's development server (`npm start`)**, the app runs on a local server. LocalStorage data may seem to reset frequently due to the development server's behavior.
+   - Development tools, such as `webpack-dev-server`, sometimes clear `localStorage` when rebuilding or refreshing the environment. This is not typical browser behavior but a feature of these tools.
+
+2. **localStorage in Production:**
+   - In the production environment (e.g., when deployed to platforms like Vercel or Netlify), the app is served as static files. The `localStorage` behaves consistently, persisting data across reloads.
+   - In this scenario, data in `localStorage` is only cleared when explicitly removed or overwritten in the code.
+
+### Key Differences Between Development and Production:
+
+| **Aspect**                | **Development Environment**                                         | **Production Environment**                           |
+|---------------------------|---------------------------------------------------------------------|-----------------------------------------------------|
+| Server Behavior           | Development server dynamically rebuilds and may reset data.        | Static server serves files without resets.          |
+| localStorage Persistence  | Can reset due to server rebuilds or development tools.             | Persists until cleared programmatically or manually. |
+| Page Load Handling        | Hot reloading might interfere with `localStorage`.                 | Normal browser behavior ensures persistence.        |
+
+### How to Handle This in Development:
+
+To ensure `localStorage` behaves as expected during development:
+1. Check that your development tools or scripts are not clearing the `localStorage`. For instance, review the `webpack-dev-server` configuration or any related plugins.
+2. Test the app in a standard browser environment outside of the development server. For example, open the `index.html` file in a browser after running the production build (`npm run build`).
+3. Use **DevTools** in the browser to inspect the `localStorage` (`Application > Local Storage` tab in Chrome DevTools).
+
+### Conclusion:
+Understanding how `localStorage` behaves across environments helped me better design and debug the application, ensuring consistent performance after deployment. This learning experience has enhanced my confidence in managing persistent client-side data.
 
 ---
 
